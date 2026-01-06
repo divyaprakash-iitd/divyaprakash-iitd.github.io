@@ -12,7 +12,7 @@ redirect_from:
 </div>-->
 This website is a dedicated platform where I share my journey and expertise in programming, research, and numerical simulations, with a focus on computational fluid dynamics (CFD). You'll find blog tutorials and accompanying videos that explore various CFD concepts and techniques.
 
-Whether you're a student, researcher, or enthusiast, &nabla;PCFD is designed to be an engaging resource for anyone interested in CFD and its applications. Be sure to check out the [Portfolio](https://dpcfd.com/portfolio) section to explore some of the projects I’ve worked on and am currently pursuing. Dive into the world of CFD through tutorials, insights, and personal experiences from my work in the field.
+Whether you are a student, researcher, or enthusiast, &nabla;PCFD is designed to be an engaging resource for anyone interested in CFD and its applications. Be sure to check out the [Portfolio](https://dpcfd.com/portfolio) section to explore some of the projects I’ve worked on and am currently pursuing. Dive into the world of CFD through tutorials, insights, and personal experiences from my work in the field.
 
 <!--Note: This website is a work in progress—stay tuned as I continue to add more content and features!
 
