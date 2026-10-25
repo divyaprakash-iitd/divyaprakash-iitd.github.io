@@ -23,6 +23,8 @@ Whether you're a student, researcher, or enthusiast, &nabla;PCFD is designed to 
 
 **Note:** This website is a work in progress, so stay tuned as I continue to add more content and features!
 
+*(Demo: this line was added from a Claude Code session to test deployment — safe to remove.)*
+
 <p align="center">
   <img src="/images/DP_ECCOMAS_Pic.png" width="100%" style="transform: rotate(0deg);" alt="Cilia-Particle Interaction"/>
 </p>
