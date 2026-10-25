@@ -17,13 +17,6 @@ redirect_from:
     IIT Delhi on sensing and transporting particles with arrays of artificial cilia, combining immersed boundary
     methods with machine learning.
   </p>
-  <p class="home-intro__links">
-    <a class="btn" href="{{ base_path }}/cv/">CV</a>
-    <a class="btn btn--inverse" href="{{ base_path }}/portfolio/">Portfolio</a>
-    <a class="btn btn--inverse" href="{{ base_path }}/year-archive/">Blog</a>
-    <a class="btn btn--inverse" href="https://github.com/divyaprakash-iitd">GitHub</a>
-    <a class="btn btn--inverse" href="https://scholar.google.com/citations?user=H4Byf9EAAAAJ&hl=en">Scholar</a>
-  </p>
 </div>
 
 ## What I work on
