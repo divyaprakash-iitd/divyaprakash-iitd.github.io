@@ -13,7 +13,7 @@ title                    : "&nabla;PCFD"
 title_separator          : "-"
 name                     : &name "Divyaprakash"
 description              : &description "A website for CFD enthusiasts"
-url                      : https://divyaprakash-iitd.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://dpcfd.com # Must match the custom domain in CNAME. the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "divyaprakash-iitd/divyaprakash-iitd.github.io"
 
