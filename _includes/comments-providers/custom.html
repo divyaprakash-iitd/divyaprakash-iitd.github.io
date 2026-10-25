@@ -1,12 +1,26 @@
 <!-- start custom comments snippet -->
+{% comment %} The template includes this snippet twice per page; the script loads giscus only once.
+   The page HTML is compressed onto one line, so use /* */ comments in the script, never //. {% endcomment %}
 {% if site.comments.giscus %}
-  <div id="giscus-comments">
+  <div class="giscus-comments">
     <div class="giscus"></div>
     <script>
       (function () {
-        // Match the giscus theme to the site's light/dark toggle
+        if (window.giscusLoaded) return;
+        window.giscusLoaded = true;
+        var container = document.currentScript.parentNode;
+
+        /* Match the giscus theme to the site's light/dark toggle */
         function giscusTheme() {
           return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        }
+
+        /* Initial theme, worked out the same way as the site's main script (which may not have run yet) */
+        function initialTheme() {
+          var stored = null;
+          try { stored = localStorage.getItem("theme"); } catch (e) {}
+          if (stored === "dark" || stored === "light") return stored;
+          return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
         }
 
         var script = document.createElement("script");
@@ -20,14 +34,14 @@
         script.setAttribute("data-reactions-enabled", "{{ site.comments.giscus.reactions_enabled }}");
         script.setAttribute("data-emit-metadata", "0");
         script.setAttribute("data-input-position", "bottom");
-        script.setAttribute("data-theme", giscusTheme());
+        script.setAttribute("data-theme", initialTheme());
         script.setAttribute("data-lang", "en");
         script.setAttribute("data-loading", "lazy");
         script.crossOrigin = "anonymous";
         script.async = true;
-        document.getElementById("giscus-comments").appendChild(script);
+        container.appendChild(script);
 
-        // Update the embedded comments when the theme is toggled
+        /* Update the embedded comments when the theme is toggled */
         new MutationObserver(function () {
           var frame = document.querySelector("iframe.giscus-frame");
           if (frame) {
