@@ -8,6 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
+site_theme               : "dpcfd" # Custom light/dark theme (see _sass/theme/_dpcfd_*.scss). Other options: "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "&nabla;PCFD"
 title_separator          : "-"
 name                     : &name "Divyaprakash"
@@ -31,14 +32,19 @@ author:
   email            : "divyaprakash@am.iitd.ac.in" 
 
   # Academic websites
+  academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=H4Byf9EAAAAJ&hl=en"
+  inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0004-3158-4579"
   semantic         : # URL
+  ssrn             : # URL
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
   scopus           : # URL
+  zotero           : # URL
+
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
@@ -49,6 +55,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
+  artstation       : # Username
   bluesky          : #"bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
@@ -84,12 +91,12 @@ publication_category:
     title: 'Conference Papers'
 
 # Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
+teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
 future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false #change to true to add link to talkmap on talks page
+talkmap_link             : false      #change to true to add link to talkmap on talks page
 comments:
   provider: "custom"
   giscus:
@@ -100,7 +107,7 @@ comments:
     mapping: "pathname"  # Add this (currently it's discussion_term)
     strict: true  # Add this
     reactions_enabled: '1'
-    theme: "light"
+    theme: "light"  # Initial theme only; the comments follow the site light/dark toggle
     language: "en"  # Add this
     loading: "lazy"  # Add this
 # comments:
@@ -157,7 +164,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : dpcfd-og.png   # Social media default site image (lives in /images/)
+og_description           :  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -309,14 +317,14 @@ defaults:
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
 
 # Outputting
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Plugins
 plugins:
@@ -324,6 +332,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
   - jemoji
 
 # Mimic GitHub Pages with --safe
@@ -332,6 +341,7 @@ whitelist:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-redirect-from
   - jemoji
 
 
@@ -365,7 +375,7 @@ tag_archive:
 
 
 # HTML Compression
-# - http://jch.penibelst.de/
+# - https://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
