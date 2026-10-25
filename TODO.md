@@ -14,7 +14,6 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
       `selected-cells.eps`, `cloud_py.png`) after checking nothing links to them.
 
 ## 2. Home page and sidebar
-- [ ] The sidebar email is the IIT Delhi address; switch to a permanent one if that account closes.
 - [x] Open the About page with one or two sentences about you and your research (who you are, IIT Delhi, immersed boundary
       methods / cilia–particle interaction), then the site description.
 - [x] Drop the "This website is a work in progress" note.
