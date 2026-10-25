@@ -76,12 +76,6 @@
 /* Home page */
 .home-intro__title { margin-top: 0; }
 .home-intro__lead { font-size: 1.05em; }
-.home-intro__links .btn { margin-right: 0.25em; }
-.home-intro__links .btn--inverse {
-  color: var(--global-text-color) !important;   /* the template's inverse button is too faint in light mode */
-  border-color: var(--global-text-color-light) !important;
-  &:hover { color: var(--global-link-color) !important; }
-}
 
 .home-cards {
   display: grid;
