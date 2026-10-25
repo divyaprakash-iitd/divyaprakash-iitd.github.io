@@ -1,25 +1,41 @@
 <!-- start custom comments snippet -->
-<!-- start custom comments snippet -->
 {% if site.comments.giscus %}
   <div id="giscus-comments">
-    <script src="https://giscus.app/client.js"
-        data-repo="{{ site.repository }}"
-        data-repo-id="{{ site.comments.giscus.repo_id }}"
-        data-category="{{ site.comments.giscus.category }}"
-        data-category-id="{{ site.comments.giscus.category_id }}"
-        data-mapping="pathname"
-        data-strict="1"
-        data-reactions-enabled="{{ site.comments.giscus.reactions_enabled }}"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="{{ site.comments.giscus.theme }}"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-    </script>
     <div class="giscus"></div>
+    <script>
+      (function () {
+        // Match the giscus theme to the site's light/dark toggle
+        function giscusTheme() {
+          return document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        }
+
+        var script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.setAttribute("data-repo", "{{ site.repository }}");
+        script.setAttribute("data-repo-id", "{{ site.comments.giscus.repo_id }}");
+        script.setAttribute("data-category", "{{ site.comments.giscus.category }}");
+        script.setAttribute("data-category-id", "{{ site.comments.giscus.category_id }}");
+        script.setAttribute("data-mapping", "pathname");
+        script.setAttribute("data-strict", "1");
+        script.setAttribute("data-reactions-enabled", "{{ site.comments.giscus.reactions_enabled }}");
+        script.setAttribute("data-emit-metadata", "0");
+        script.setAttribute("data-input-position", "bottom");
+        script.setAttribute("data-theme", giscusTheme());
+        script.setAttribute("data-lang", "en");
+        script.setAttribute("data-loading", "lazy");
+        script.crossOrigin = "anonymous";
+        script.async = true;
+        document.getElementById("giscus-comments").appendChild(script);
+
+        // Update the embedded comments when the theme is toggled
+        new MutationObserver(function () {
+          var frame = document.querySelector("iframe.giscus-frame");
+          if (frame) {
+            frame.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme() } } }, "https://giscus.app");
+          }
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+      })();
+    </script>
   </div>
 {% endif %}
-<!-- end custom comments snippet -->
 <!-- end custom comments snippet -->
