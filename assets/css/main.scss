@@ -100,7 +100,8 @@
   margin: 1em 0;
 
   &__item { display: block; text-decoration: none; }
-  img {
+  video {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;

@@ -57,15 +57,15 @@ redirect_from:
 
 <div class="home-featured">
   <a class="home-featured__item" href="{{ base_path }}/portfolio/portfolio-1/">
-    <img src="{{ base_path }}/images/cfd_gallery/thumbs/pwave.webp" alt="Particle transport by peristaltic waves of artificial cilia" loading="lazy">
+    <video src="{{ base_path }}/images/cfd_gallery/thumbs/pwave.mp4" autoplay muted loop playsinline aria-label="Particle transport by peristaltic waves of artificial cilia"></video>
     <span>Particle transport by ciliary peristalsis</span>
   </a>
   <a class="home-featured__item" href="{{ base_path }}/portfolio/portfolio-8/">
-    <img src="{{ base_path }}/images/cfd_gallery/thumbs/3d_particle.webp" alt="Immersed boundary method in OpenFOAM, lid-driven cavity with a particle" loading="lazy">
+    <video src="{{ base_path }}/images/cfd_gallery/thumbs/3d_particle.mp4" autoplay muted loop playsinline aria-label="Immersed boundary method in OpenFOAM, lid-driven cavity with a particle"></video>
     <span>Immersed boundary method in OpenFOAM</span>
   </a>
   <a class="home-featured__item" href="{{ base_path }}/portfolio/portfolio-2/">
-    <img src="{{ base_path }}/images/cfd_gallery/thumbs/lbm.webp" alt="Falling elliptical cylinder simulated with the lattice Boltzmann method" loading="lazy">
+    <video src="{{ base_path }}/images/cfd_gallery/thumbs/lbm.mp4" autoplay muted loop playsinline aria-label="Falling elliptical cylinder simulated with the lattice Boltzmann method"></video>
     <span>Falling cylinder with the lattice Boltzmann method</span>
   </a>
 </div>
