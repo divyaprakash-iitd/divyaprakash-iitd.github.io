@@ -3,4 +3,34 @@
 <!-- Support for MathJax -->
 <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js"></script>
 
+<!-- Looping simulation videos (class "lazy-play"): play only while on screen, so a page doesn't download every clip
+     at once. Without JavaScript, or with reduced motion requested, they stay paused with controls. -->
+<script>
+  (function () {
+    /* Use only block comments here: the site compresses each page's HTML onto one line. */
+    var videos = document.querySelectorAll('video.lazy-play');
+    if (!videos.length || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var v = entry.target;
+        if (entry.isIntersecting) {
+          var p = v.play();
+          if (p && p.catch) p.catch(function (err) {
+            /* Show controls only if the browser blocked autoplay; a play cut short by scrolling away is fine. */
+            if (err && err.name === 'NotAllowedError') v.controls = true;
+          });
+        } else if (!v.paused) {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    videos.forEach(function (v) {
+      v.muted = true;
+      v.controls = false;
+      observer.observe(v);
+    });
+  })();
+</script>
+
 <!-- end custom footer snippets -->
