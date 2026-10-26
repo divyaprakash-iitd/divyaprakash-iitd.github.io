@@ -36,3 +36,9 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
   "Site-specific styles" section at the end of `assets/css/main.scss`. Keep custom changes there to make merges easy.
 - Deployment is via GitHub Actions (`.github/workflows/jekyll.yml`); the classic Pages builder can't compile the template's Sass.
 - `url` in `_config.yml` must stay `https://dpcfd.com`, or the JavaScript (theme toggle, menu) is blocked by the redirect.
+
+## 4. Later
+- [ ] The template's sample "Terms and Privacy Policy" page was removed. The site uses Google Analytics, so consider a
+      short privacy note of your own (what Analytics and the Giscus comments collect).
+- [ ] Links: `.github/workflows/link-check.yml` checks every link monthly (and on demand from the Actions tab). Its
+      report lists dead links; fix or remove them in the posts. First run (Oct 2026): 3 broken of 2,192, all fixed.
