@@ -15,7 +15,7 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
 - [x] Home page artwork `images/DP_ECCOMAS_Pic.png` is 5642 px wide (1.6 MB) but shown at ~750 px. Serve a ~1600 px WebP
       and link the full-size file.
 - [ ] Remove the remaining unused large files from `images/` after checking nothing links to them
-      (e.g. `cfd_gallery/donut_animation.webp` 15 MB, not used anywhere; `selected-cells.eps`).
+      (e.g. `selected-cells.eps`; `cfd_gallery/donut_animation.webp` has been deleted).
 
 ## 2. Home page and sidebar
 - [x] Open the About page with one or two sentences about you and your research (who you are, IIT Delhi, immersed boundary
