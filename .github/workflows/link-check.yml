@@ -32,6 +32,8 @@ jobs:
           JEKYLL_ENV: production
       - name: Check links
         uses: lycheeverse/lychee-action@v2.0.2
+        # The action exits with an error when it finds dead links, even with fail: false; keep the run green.
+        continue-on-error: true
         with:
           # 403 and 429 usually mean a site blocks automated checks (Google Scholar, publishers), not a dead link.
           # Social "share" buttons are skipped: those sites always refuse automated requests.
