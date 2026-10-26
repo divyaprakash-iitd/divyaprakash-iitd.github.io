@@ -10,21 +10,21 @@ author_profile: true
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Particle transport using peristaltic waves of artificial cilia [Fortran|MATLAB|C|Python] [2025] </h2>
-      <img src="/images/cfd_gallery/pwave.webp" alt="pwave" loading="lazy">
+      <video src="/images/cfd_gallery/video/pwave.mp4" poster="/images/cfd_gallery/video/pwave.jpg" width="800" height="204" muted loop playsinline preload="none" controls aria-label="pwave"></video>
     </div>
   </div>
   
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Particle detection and deflection using artificial cilia [Fortran|MATLAB|C|Python] [2025] </h2>
-      <img src="/images/cfd_gallery/ciliadnd.webp" alt="Cilia DND" loading="lazy">
+      <video src="/images/cfd_gallery/video/ciliadnd.mp4" poster="/images/cfd_gallery/video/ciliadnd.jpg" width="800" height="208" muted loop playsinline preload="none" controls aria-label="Cilia DND"></video>
     </div>
   </div>
   
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2>Autorotation of a rotor [OpenFOAM] [2024]</h2>
-      <img src="/images/cfd_gallery/inducedRotor2D.webp" alt="Rotor Autorotation" loading="lazy">
+      <video src="/images/cfd_gallery/video/inducedRotor2D.mp4" poster="/images/cfd_gallery/video/inducedRotor2D.jpg" width="500" height="500" muted loop playsinline preload="none" controls aria-label="Rotor Autorotation"></video>
     </div>
   </div>
   
@@ -32,21 +32,21 @@ author_profile: true
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2>IBM Implementation in OpenFOAM (Lid Driven Cavity) [OpenFOAM-Custom Solver] [2024] </h2>
-      <img src="/images/cfd_gallery/3d_particle.webp" alt="IBM LDC" loading="lazy">
+      <video src="/images/cfd_gallery/video/3d_particle.mp4" poster="/images/cfd_gallery/video/3d_particle.jpg" width="800" height="474" muted loop playsinline preload="none" controls aria-label="IBM LDC"></video>
     </div>
   </div>
   
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2>IBM Implementation in OpenFOAM (Channel Flow) [OpenFOAM-Custom Solver] [2024]</h2>
-      <img src="/images/cfd_gallery/channel_particle.webp" alt="Channel FLow" loading="lazy">
+      <video src="/images/cfd_gallery/video/channel_particle.mp4" poster="/images/cfd_gallery/video/channel_particle.jpg" width="800" height="408" muted loop playsinline preload="none" controls aria-label="Channel FLow"></video>
     </div>
   </div>
   
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2>Cilia-Particle Interaction [Fortran|MATLAB|C|Python] [2022]</h2>
-      <img src="/images/cfd_gallery/ibm_ellipse.webp" alt="Cilia-Particle" loading="lazy">
+      <video src="/images/cfd_gallery/video/ibm_ellipse.mp4" poster="/images/cfd_gallery/video/ibm_ellipse.jpg" width="800" height="158" muted loop playsinline preload="none" controls aria-label="Cilia-Particle"></video>
     </div>
     <!--<div class="simulation-description">
       <p><strong>Parameters:</strong></p>
@@ -62,57 +62,87 @@ author_profile: true
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2>Falling Eliiptical Cylinder (Lattice Boltzmann Method) [MATLAB] [2020] </h2>
-      <img src="/images/cfd_gallery/lbm.gif" alt="LBM" loading="lazy">
+      <video src="/images/cfd_gallery/video/lbm.mp4" poster="/images/cfd_gallery/video/lbm.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="LBM"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Modelling Thermal Decomposition and Deformation of a Solid Reactant [Uintah] [2017]</h2>
-      <img src="/images/cfd_gallery/regression.webp" alt="regression" loading="lazy">
+      <video src="/images/cfd_gallery/video/regression.mp4" poster="/images/cfd_gallery/video/regression.jpg" width="800" height="406" muted loop playsinline preload="none" controls aria-label="regression"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> n-Heptane Pyrolysis in a Pan Inside a Semi-Open Container [FDS] [2017]</h2>
-      <img src="/images/cfd_gallery/pyrolysis_soot_flame.webp" alt="fds1" loading="lazy">
+      <video src="/images/cfd_gallery/video/pyrolysis_soot_flame.mp4" poster="/images/cfd_gallery/video/pyrolysis_soot_flame.jpg" width="800" height="880" muted loop playsinline preload="none" controls aria-label="fds1"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Deflection of Cook's Membrane using Material Point Method [Uintah] [2016]</h2>
-      <img src="/images/cfd_gallery/cook_deflection_animation.webp" alt="cook" loading="lazy">
+      <video src="/images/cfd_gallery/video/cook_deflection_animation.mp4" poster="/images/cfd_gallery/video/cook_deflection_animation.jpg" width="600" height="600" muted loop playsinline preload="none" controls aria-label="cook"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2>River Bed Scour Below Pipeline [OpenFOAM-Custom Solver] [2016]</h2>
-      <img src="/images/cfd_gallery/scourAnimation.gif" alt="scour" loading="lazy">
+      <video src="/images/cfd_gallery/video/scourAnimation.mp4" poster="/images/cfd_gallery/video/scourAnimation.jpg" width="640" height="480" muted loop playsinline preload="none" controls aria-label="scour"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Flow over a Pipeline with ground effect [OpenFOAM-Custom Solver] [2016]</h2>
-      <img src="/images/cfd_gallery/circleAnimation.webp" alt="vortex shedding" loading="lazy">
+      <video src="/images/cfd_gallery/video/circleAnimation.mp4" poster="/images/cfd_gallery/video/circleAnimation.jpg" width="800" height="332" muted loop playsinline preload="none" controls aria-label="vortex shedding"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Two-way FSI of a Cantilever Beam in Compressible Flow [ANSYS] [2015] </h2>
-      <img src="/images/cfd_gallery/fsi_beam.webp" alt="fsi-beam" loading="lazy">
+      <video src="/images/cfd_gallery/video/fsi_beam.mp4" poster="/images/cfd_gallery/video/fsi_beam.jpg" width="800" height="600" muted loop playsinline preload="none" controls aria-label="fsi-beam"></video>
     </div>
   </div>
 
   <div class="simulation-item">
     <div class="simulation-animation">
       <h2> Simulation of Coffee Stirred by a Spoon [StarCCM+] [2014] </h2>
-      <img src="/images/cfd_gallery/coffee.webp" alt="coffee" loading="lazy">
+      <video src="/images/cfd_gallery/video/coffee.mp4" poster="/images/cfd_gallery/video/coffee.jpg" width="800" height="450" muted loop playsinline preload="none" controls aria-label="coffee"></video>
     </div>
   </div>
 
 </div>
+
+<script>
+  /* Play each gallery video only while it is on screen, so the page doesn't download every clip at once.
+     Without JavaScript, or with reduced motion requested, the videos keep their controls and stay paused.
+     Use only block comments here: the site compresses each page's HTML onto one line. */
+  (function () {
+    var videos = document.querySelectorAll('.simulation-gallery video');
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var v = entry.target;
+        if (entry.isIntersecting) {
+          var p = v.play();
+          if (p && p.catch) p.catch(function (err) {
+            /* Show controls only if the browser blocked autoplay; a play cut short by scrolling away is fine. */
+            if (err && err.name === 'NotAllowedError') v.controls = true;
+          });
+        } else if (!v.paused) {
+          v.pause();
+        }
+      });
+    }, { rootMargin: '200px 0px' });
+    videos.forEach(function (v) {
+      v.muted = true;
+      v.controls = false;
+      observer.observe(v);
+    });
+  })();
+</script>
