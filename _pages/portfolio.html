@@ -7,9 +7,25 @@ author_profile: true
 
 {% include base_path %}
 
-
+{% comment %}
+  Card grid. Each portfolio entry's excerpt is "description<br/>media", so it is split at the first <br/>
+  into the card text and the card preview (an image, or a looping video with class "lazy-play").
+{% endcomment %}
+<div class="portfolio-grid">
 {% assign reversed_portfolio = site.portfolio | reverse %}
 {% for post in reversed_portfolio %}
-  {% include archive-single.html %}
+  {% assign parts = post.excerpt | split: "<br/>" %}
+  {% assign description = parts | first | strip_html | strip %}
+  {% assign media = post.excerpt | remove_first: parts[0] | remove_first: "<br/>" | strip %}
+  <article class="portfolio-card" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if media != "" %}
+      <a class="portfolio-card__media" href="{{ base_path }}{{ post.url }}" tabindex="-1" aria-hidden="true">{{ media }}</a>
+    {% endif %}
+    <div class="portfolio-card__body">
+      <h2 class="portfolio-card__title" itemprop="headline"><a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ post.title }}</a></h2>
+      <p class="portfolio-card__date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %Y" }}</time></p>
+      <p class="portfolio-card__text" itemprop="description">{{ description }}</p>
+    </div>
+  </article>
 {% endfor %}
-
+</div>
