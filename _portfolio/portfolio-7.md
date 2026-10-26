@@ -1,6 +1,6 @@
 ---
 title: "Machine Learning-Based Estimation of Superdroplet Growth Rates"
-excerpt: "A Python-based machine learning framework for parameterizing superdroplet growth in cloud microphysics models, leveraging high-fidelity Direct Numerical Simulation (DNS) data.<br/><img src='/images/cloud_py.png'>"
+excerpt: "A Python-based machine learning framework for parameterizing superdroplet growth in cloud microphysics models, leveraging high-fidelity Direct Numerical Simulation (DNS) data.<br/><img src='/images/cloud_py.webp' alt='Superdroplet growth: machine learning model compared with DNS data' loading='lazy'>"
 collection: portfolio
 date: 2024-10-12
 ---

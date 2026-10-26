@@ -1,6 +1,6 @@
 ---
 title: "OpenFOAM Integration with Fortran Solid Solver using Immersed Boundary Method"
-excerpt: "A custom OpenFOAM solver that integrates a Fortran-based 3D solid mechanics solver for fluid-structure interaction simulations using the Immersed Boundary Method.<br/><img src='/images/cfd_gallery/3d_particle.webp'>"
+excerpt: "A custom OpenFOAM solver that integrates a Fortran-based 3D solid mechanics solver for fluid-structure interaction simulations using the Immersed Boundary Method.<br/><video class='lazy-play' src='/images/cfd_gallery/video/3d_particle.mp4' poster='/images/cfd_gallery/video/3d_particle.jpg' width='800' height='474' muted loop playsinline preload='none' controls aria-label='Immersed boundary method in OpenFOAM, lid-driven cavity with a particle'></video>"
 collection: portfolio
 date: 2023-01-15
 ---

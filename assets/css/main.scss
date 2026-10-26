@@ -130,3 +130,12 @@
   img { width: 100%; border-radius: 4px; }
   figcaption { margin-top: 0.5em; font-size: 0.8em; color: var(--global-fig-caption-color); }
 }
+
+/* Simulation videos in portfolio excerpts (portfolio, sitemap and collection pages) */
+video.lazy-play {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  background: #fff;
+}

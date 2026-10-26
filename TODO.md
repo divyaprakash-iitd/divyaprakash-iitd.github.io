@@ -3,8 +3,9 @@
 Improvement ideas from the October 2026 review. Kept in the repo but excluded from the site build (see `exclude` in `_config.yml`).
 
 ## 1. Reduce page weight (highest impact)
-- [ ] The original gallery animations are still in `images/cfd_gallery/` (the gallery now uses `images/cfd_gallery/video/`).
-      `3d_particle.webp`, `ibm_ellipse.webp` and `lbm.gif` are still used by portfolio pages; convert those too, then delete the originals.
+- [x] Portfolio excerpts converted to the same looping videos (`ellipsoidal_shell.gif` 36.6 MB -> 3.1 MB MP4,
+      `cloud_py.png` 4.4 MB -> 416 KB WebP); the original animations have been deleted. Videos with class `lazy-play`
+      play only while on screen (script in `_includes/footer/custom.html`).
 - [x] Gallery: convert to looping MP4 videos (52 MB -> ~6 MB, all frames, same speed). Preview made in the
       Claude session; the home page thumbnails in `images/cfd_gallery/thumbs/` already use this approach
       (H.264, 560 px wide, original frame timing preserved).
@@ -13,8 +14,8 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
       Re-encode at display size (~800 px wide) and a lower frame rate.
 - [x] Home page artwork `images/DP_ECCOMAS_Pic.png` is 5642 px wide (1.6 MB) but shown at ~750 px. Serve a ~1600 px WebP
       and link the full-size file.
-- [ ] Remove unused large files from `images/` (e.g. `ellipsoidal_shell.gif` 35 MB, `cfd_gallery/donut_animation.webp` 15 MB,
-      `selected-cells.eps`, `cloud_py.png`) after checking nothing links to them.
+- [ ] Remove the remaining unused large files from `images/` after checking nothing links to them
+      (e.g. `cfd_gallery/donut_animation.webp` 15 MB, not used anywhere; `selected-cells.eps`).
 
 ## 2. Home page and sidebar
 - [x] Open the About page with one or two sentences about you and your research (who you are, IIT Delhi, immersed boundary

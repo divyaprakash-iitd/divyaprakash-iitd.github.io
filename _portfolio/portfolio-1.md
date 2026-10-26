@@ -1,6 +1,6 @@
 ---
 title: "Immersed Boundary Method for Cilia & Particles using Lattice Spring Method"
-excerpt: "A high-performance computational fluid dynamics framework for simulating fluid-structure interactions with cilia and deformable particles.<br/><img src='/images/cfd_gallery/ibm_ellipse.webp'>"
+excerpt: "A high-performance computational fluid dynamics framework for simulating fluid-structure interactions with cilia and deformable particles.<br/><video class='lazy-play' src='/images/cfd_gallery/video/ibm_ellipse.mp4' poster='/images/cfd_gallery/video/ibm_ellipse.jpg' width='800' height='158' muted loop playsinline preload='none' controls aria-label='Cilia and a deformable particle interacting with the flow'></video>"
 collection: portfolio
 date: 2022-06-01
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Fluid-Structure Interaction Using Lattice Boltzmann Method"
-excerpt: "A Lattice Boltzmann Method implementation for simulating falling elliptical cylinder dynamics in fluid flow.<br/><img src='/images/lbm.gif'>"
+excerpt: "A Lattice Boltzmann Method implementation for simulating falling elliptical cylinder dynamics in fluid flow.<br/><video class='lazy-play' src='/images/cfd_gallery/video/lbm.mp4' poster='/images/cfd_gallery/video/lbm.jpg' width='640' height='480' muted loop playsinline preload='none' controls aria-label='Falling elliptical cylinder simulated with the lattice Boltzmann method'></video>"
 collection: portfolio
 date: 2021-01-30
 ---
