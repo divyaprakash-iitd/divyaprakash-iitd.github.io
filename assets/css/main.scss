@@ -52,11 +52,14 @@
   width: 100%;
   margin-bottom: 1em;
 
-  img {
+  img,
+  video {
     width: 100%;
+    height: auto;
     max-width: 800px;
     display: block;
     margin: 0 auto;
+    background: #fff;  /* the simulations have white backgrounds; avoids a dark flash before the first frame */
   }
 }
 
