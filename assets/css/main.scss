@@ -180,3 +180,88 @@ video.lazy-play {
 /* 404 page */
 .notfound__lead { font-size: 1.05em; }
 .notfound__links li { margin-bottom: 0.3em; }
+
+/* Blog posts page: compact list */
+.post-list__intro { color: var(--global-fig-caption-color); font-size: 0.9em; }
+.post-list { display: flex; flex-direction: column; margin-bottom: 1.5em; }
+.post-row {
+  padding: 0.75em 0;
+  border-bottom: 1px solid var(--global-border-color);
+
+  &:last-child { border-bottom: 0; }
+  &__title { margin: 0; font-size: 1em; line-height: 1.35; }
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25em 0.4em;
+    margin: 0.3em 0 0;
+    font-size: 0.75em;
+    color: var(--global-fig-caption-color);
+  }
+  &__sep { opacity: 0.6; }
+  &__tag {
+    padding: 0.05em 0.5em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 999px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover { color: var(--global-link-color); border-color: var(--global-link-color); }
+  }
+  &__summary { margin: 0.35em 0 0; font-size: 0.85em; }
+}
+
+/* GSoC page: outcome box and weekly timeline */
+.gsoc-outcome {
+  margin: 1em 0 1.5em;
+  padding: 0.9em 1.1em;
+  border: 1px solid var(--global-border-color);
+  border-left: 3px solid var(--global-base-color);
+  border-radius: 4px;
+  font-size: 0.9em;
+
+  p { margin: 0 0 0.4em; }
+  p:last-child { margin-bottom: 0; }
+}
+.gsoc-timeline {
+  list-style: none;
+  margin: 1em 0 0;
+  padding: 0;
+
+  &__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5.5em 1fr;
+    gap: 1em;
+    padding-bottom: 1.4em;
+
+    /* the vertical line joining the weeks */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 2.75em;
+      top: 2em;
+      bottom: 0;
+      border-left: 2px solid var(--global-border-color);
+    }
+    &:last-child::before { display: none; }
+  }
+  &__step {
+    align-self: start;
+    padding: 0.25em 0;
+    border: 1px solid var(--global-base-color);
+    border-radius: 999px;
+    background: var(--global-bg-color);
+    color: var(--global-base-color);
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+  }
+  &__body { min-width: 0; }
+  &__title { margin: 0; font-size: 1em; line-height: 1.35; }
+  &__date { margin: 0.2em 0 0; font-size: 0.75em; color: var(--global-fig-caption-color); }
+  &__summary { margin: 0.35em 0 0; font-size: 0.85em; }
+}

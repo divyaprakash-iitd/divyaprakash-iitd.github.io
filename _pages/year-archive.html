@@ -8,12 +8,17 @@ redirect_from:
 ---
 
 {% include base_path %}
+<p class="post-list__intro">Tutorials and notes on CFD, OpenFOAM and high-performance computing. Browse by <a href="{{ base_path }}/tags/">tag</a>, or see the <a href="{{ base_path }}/gsoc-blog/">GSoC 2025 series</a>.</p>
+
 {% capture written_year %}'None'{% endcapture %}
 {% for post in site.posts %}
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% if year != written_year %}
+    {% unless forloop.first %}</div>{% endunless %}
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    <div class="post-list">
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-  {% include archive-single.html %}
+  {% include post-row.html %}
+  {% if forloop.last %}</div>{% endif %}
 {% endfor %}
