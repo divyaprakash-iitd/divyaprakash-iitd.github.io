@@ -41,4 +41,4 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
 - [ ] The template's sample "Terms and Privacy Policy" page was removed. The site uses Google Analytics, so consider a
       short privacy note of your own (what Analytics and the Giscus comments collect).
 - [ ] Links: `.github/workflows/link-check.yml` checks every link monthly (and on demand from the Actions tab). Its
-      report lists dead links; fix or remove them in the posts.
+      report lists dead links; fix or remove them in the posts. First run (Oct 2026): 3 broken of 2,192, all fixed.
