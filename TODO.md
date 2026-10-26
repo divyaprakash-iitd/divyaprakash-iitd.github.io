@@ -3,8 +3,9 @@
 Improvement ideas from the October 2026 review. Kept in the repo but excluded from the site build (see `exclude` in `_config.yml`).
 
 ## 1. Reduce page weight (highest impact)
-- [ ] The home page now uses small thumbnails from `images/cfd_gallery/thumbs/` (made with Pillow: 560 px wide,
-      at most 150 frames, quality 55). Do the same for the gallery page itself.
+- [ ] Gallery: convert to looping MP4 videos (52 MB -> ~6 MB, all frames, same speed). Preview made in the
+      Claude session; the home page thumbnails in `images/cfd_gallery/thumbs/` already use this approach
+      (H.264, 560 px wide, original frame timing preserved).
 - [ ] Gallery (`_pages/gallery.md`) loads ~52 MB of animations. Biggest: `images/cfd_gallery/pwave.webp` (23 MB),
       `ibm_ellipse.webp` (5.5 MB), `fsi_beam.webp`, `ciliadnd.webp`, `channel_particle.webp`, `3d_particle.webp` (2–4 MB each).
       Re-encode at display size (~800 px wide) and a lower frame rate.
