@@ -1,53 +1,59 @@
-% dpcfd logo -- variant: dpcfd_mark
+% dpcfd logo -- logarithmic vortex mark, black on light blue
 \documentclass[tikz,border=0pt]{standalone}
 
 % ---- colours ---------------------------------------------------------------
-\definecolor{dpdisc}{HTML}{9CE2FF}        % disc (centre, when shaded)
-\definecolor{dpdiscedge}{HTML}{9CE2FF}% disc edge (only used when shaded)
-\definecolor{dpmarkin}{HTML}{000000}    % mark inside the disc
-\definecolor{dpmarkout}{HTML}{000000}  % mark where it leaves the disc
+\definecolor{dpdisc}{HTML}{9CE2FF}      % disc
+\definecolor{dpmarkin}{HTML}{000000}  % mark inside the disc
+\definecolor{dpmarkout}{HTML}{000000}% mark where it leaves the disc
 
 % ---- parameters (fractions of the disc radius) -----------------------------
 \newcommand{\logoscale}{3cm}            % disc radius on paper
 \pgfmathsetmacro{\slant}{16.7}          % stem lean from vertical, degrees
-\pgfmathsetmacro{\cdrop}{0.06}          % spiral centre below the disc centre
-\pgfmathsetmacro{\rin}{0.17}            % spiral radius at the inner end
-\pgfmathsetmacro{\pitch}{0.38}          % radius gained per turn
+\pgfmathsetmacro{\cdrop}{0.05}      % spiral centre below the disc centre
+\pgfmathsetmacro{\cshift}{0.05}    % spiral centre right of the disc centre
+\pgfmathsetmacro{\rin}{0.24}          % spiral radius at the inner end
+\pgfmathsetmacro{\rout}{0.90}        % spiral radius at the outer end
 \pgfmathsetmacro{\turns}{2}             % number of turns
-\pgfmathsetmacro{\rout}{\rin+\pitch*\turns}
-\pgfmathsetmacro{\win}{0.12}         % stroke width at the inner end
-\pgfmathsetmacro{\wout}{0.055}       % stroke width at the outer end
+\pgfmathsetmacro{\win}{0.02}          % band width at the inner end
+\pgfmathsetmacro{\wout}{0.21}        % band width at the outer end
+\pgfmathsetmacro{\wst}{0.075}          % stem width at the top (and crossbar thickness)
+\pgfmathsetmacro{\wsb}{0.075}          % stem width at the bottom (0 = pointed)
+\pgfmathsetmacro{\wat}{0.05}          % ascender width at the tip (0 = pointed)
 \pgfmathsetmacro{\handle}{0.34}         % ascender length above the spiral
 \pgfmathsetmacro{\stemlen}{1.00}        % stem length below the centre
-\pgfmathsetmacro{\barleft}{0.12}      % crossbar reach, left of the stem
-\pgfmathsetmacro{\barright}{0.08}     % crossbar reach, right of the stem
-\pgfmathsetmacro{\kk}{\pitch/(2*pi)}    % dr/dtheta of the spiral
-
-% ---- spiral band: offset the centre line along its true normal -------------
-% s runs from 0 (outer end) to \turns (inner end)
-\pgfmathdeclarefunction{sr}{1}{\pgfmathparse{\rin+\pitch*(\turns-#1)}}
-\pgfmathdeclarefunction{sw}{1}{\pgfmathparse{\wout+(\win-\wout)*#1/\turns}}
+\pgfmathsetmacro{\barleft}{0.095}       % crossbar reach, left of the stem axis
+\pgfmathsetmacro{\barright}{0.075}      % crossbar reach, right of the stem axis
+\pgfmathsetmacro{\lb}{ln(\rout/\rin)/(2*pi*\turns)}  % growth rate (logarithmic spiral)
+% ---- the spiral band -------------------------------------------------------
+% s runs from 0 (outer end) to \turns (inner end); theta = 90 + 360 s.
+% sr: radius, sk: -dr/dtheta (per radian), su: 0 at the core .. 1 outside,
+% sw: band width. The edges are offset along the true normal of the curve.
+\pgfmathdeclarefunction{sr}{1}{\pgfmathparse{\rout*exp(-\lb*2*pi*#1)}}
+\pgfmathdeclarefunction{sk}{1}{\pgfmathparse{\lb*sr(#1)}}
+\pgfmathdeclarefunction{su}{1}{\pgfmathparse{(sr(#1)-\rin)/(\rout-\rin)}}
+\pgfmathdeclarefunction{sw}{1}{\pgfmathparse{max(\win,\wout*sr(#1)/\rout)}}
 \pgfmathdeclarefunction{st}{1}{\pgfmathparse{90+360*#1}}
-\pgfmathdeclarefunction{sn}{1}{\pgfmathparse{sqrt(sr(#1)*sr(#1)+\kk*\kk)}}
-\pgfmathdeclarefunction{ex}{2}{\pgfmathparse{sr(#1)*cos(st(#1))+#2*sw(#1)/2*(sr(#1)*cos(st(#1))-\kk*sin(st(#1)))/sn(#1)}}
-\pgfmathdeclarefunction{ey}{2}{\pgfmathparse{sr(#1)*sin(st(#1))+#2*sw(#1)/2*(sr(#1)*sin(st(#1))+\kk*cos(st(#1)))/sn(#1)}}
+\pgfmathdeclarefunction{sn}{1}{\pgfmathparse{sqrt(sr(#1)*sr(#1)+sk(#1)*sk(#1))}}
+\pgfmathdeclarefunction{ex}{2}{\pgfmathparse{sr(#1)*cos(st(#1))+#2*sw(#1)/2*(sr(#1)*cos(st(#1))-sk(#1)*sin(st(#1)))/sn(#1)}}
+\pgfmathdeclarefunction{ey}{2}{\pgfmathparse{sr(#1)*sin(st(#1))+#2*sw(#1)/2*(sr(#1)*sin(st(#1))+sk(#1)*cos(st(#1)))/sn(#1)}}
 
-% the mark in one colour: spiral band, stem, ascender, crossbar
+% the mark in one colour: band, stem, ascender, crossbar
 \newcommand{\dpmark}[1]{%
-  \begin{scope}[shift={(0,-\cdrop)}, rotate=-\slant]
+  \begin{scope}[shift={(\cshift,-\cdrop)}, rotate=-\slant]
     \fill[#1]
       plot[domain=0:\turns, samples=721, variable=\s] ({ex(\s,1)},{ey(\s,1)})
       -- plot[domain=\turns:0, samples=721, variable=\s] ({ex(\s,-1)},{ey(\s,-1)})
       -- cycle;
-    \draw[#1, line width=\win*\logoscale]  (0,-\stemlen) -- (0,\rin+\win/2);
-    \draw[#1, line width=\wout*\logoscale] (0,\rout-\wout/2) -- (0,\rout+\handle);
-    \draw[#1, line width=\win*\logoscale]  (-\barleft,0) -- (\barright,0);
-
+    \fill[#1] (-\wst/2,\rin+\wst/2) -- (\wst/2,\rin+\wst/2)
+           -- (\wsb/2,-\stemlen) -- (-\wsb/2,-\stemlen) -- cycle;
+    \fill[#1] (-\wout/2,\rout-\wout/2) -- (\wout/2,\rout-\wout/2)
+           -- (\wat/2,\rout+\handle) -- (-\wat/2,\rout+\handle) -- cycle;
+    \fill[#1] (-\barleft,-\wst/2) rectangle (\barright,\wst/2);
   \end{scope}
 }
 
 \begin{document}
-\begin{tikzpicture}[x=\logoscale, y=\logoscale, line cap=butt, line join=miter]
+\begin{tikzpicture}[x=\logoscale, y=\logoscale]
   \fill[dpdisc] (0,0) circle[radius=1];
   \dpmark{dpmarkin}
 \end{tikzpicture}
