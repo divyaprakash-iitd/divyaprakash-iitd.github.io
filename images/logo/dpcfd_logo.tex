@@ -1,0 +1,56 @@
+% dpcfd logo, drawn with TikZ.
+%
+% Geometry (all lengths are fractions of the circle radius):
+%   * a light-blue disc,
+%   * a two-turn Archimedean spiral (r = r0 + b*t, t in turns) whose centre
+%     sits slightly below the disc centre,
+%   * a straight bar through the spiral centre, slanted like an italic stem,
+%     running from the inner end of the spiral down past the disc edge,
+%   * a short crossbar on that stem (the "f"),
+%   * a handle that continues the same stem upward from the outer end of the
+%     spiral and pokes out of the disc (the "d" ascender).
+%
+% Build:  pdflatex dpcfd_logo.tex
+%         pdftocairo -svg dpcfd_logo.pdf dpcfd_logo.svg
+%         pdftoppm -png -r 600 dpcfd_logo.pdf dpcfd_logo
+\documentclass[tikz,border=0pt]{standalone}
+
+% ---- colours ---------------------------------------------------------------
+\definecolor{dpblue}{RGB}{156,226,255}   % disc
+\definecolor{dpink}{RGB}{0,0,0}          % spiral and stems
+
+% ---- parameters ------------------------------------------------------------
+\newcommand{\logoscale}{3cm}  % circle radius on paper
+\pgfmathsetmacro{\slant}{16.7}          % stem lean from vertical, degrees
+\pgfmathsetmacro{\cdrop}{0.09}          % spiral centre below disc centre
+\pgfmathsetmacro{\rin}{0.17}            % spiral radius at the inner end
+\pgfmathsetmacro{\pitch}{0.38}          % radius gained per full turn
+\pgfmathsetmacro{\turns}{2}             % number of turns
+\pgfmathsetmacro{\rout}{\rin+\pitch*\turns}
+\pgfmathsetmacro{\handle}{0.34}         % length of the ascender above the spiral
+\pgfmathsetmacro{\stemlen}{1.00}        % length of the stem below the centre
+\pgfmathsetmacro{\barleft}{0.12}        % crossbar reach, left of the stem axis
+\pgfmathsetmacro{\barright}{0.09}       % crossbar reach, right of the stem axis
+\pgfmathsetmacro{\strokeunits}{0.104}   % stroke width, fraction of the radius
+
+\begin{document}
+\begin{tikzpicture}[x=\logoscale, y=\logoscale,
+                    line width=\strokeunits*\logoscale,
+                    line cap=butt, line join=miter]
+  % disc
+  \fill[dpblue] (0,0) circle[radius=1];
+
+  % everything else lives in a frame whose +y axis is the slanted stem
+  \begin{scope}[shift={(0,-\cdrop)}, rotate=-\slant]
+    % ascender, spiral (outer end -> inner end) and stem, as one path
+    \draw[dpink]
+      (0, \rout+\handle) -- (0, \rout)
+      -- plot[domain=0:\turns, samples=1441, variable=\s]
+           ({(\rin+\pitch*(\turns-\s))*cos(90+360*\s)},
+            {(\rin+\pitch*(\turns-\s))*sin(90+360*\s)})
+      -- (0, -\stemlen);
+    % crossbar of the "f"
+    \draw[dpink] (-\barleft, 0) -- (\barright, 0);
+  \end{scope}
+\end{tikzpicture}
+\end{document}
