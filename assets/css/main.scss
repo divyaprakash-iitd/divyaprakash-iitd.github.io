@@ -38,43 +38,47 @@
 ;
 /* Site-specific styles */
 
-.simulation-gallery {
-  margin: 2em 0;
+/* Simulation gallery: themed groups, two-column grid, wide clips span both columns */
+.gallery-intro { color: var(--global-fig-caption-color); font-size: 0.9em; }
+.gallery-group { margin: 2em 0 2.5em; }
+.gallery-group__title { margin-bottom: 0.8em; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75em 1.5em;
+  align-items: start;
+
+  @media (max-width: 600px) { grid-template-columns: minmax(0, 1fr); }
 }
+.gallery-item {
+  margin: 0;
+  min-width: 0;
 
-.simulation-item {
-  margin-bottom: 3em;
-  padding-bottom: 2em;
-  border-bottom: 1px solid var(--global-border-color);
-}
+  &--wide { grid-column: 1 / -1; }
 
-.simulation-animation {
-  width: 100%;
-  margin-bottom: 1em;
-
-  img,
   video {
+    display: block;
     width: 100%;
     height: auto;
-    max-width: 800px;
-    display: block;
-    margin: 0 auto;
     background: #fff;  /* the simulations have white backgrounds; avoids a dark flash before the first frame */
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
   }
+  figcaption { margin-top: 0.6em; font-family: inherit; }  /* the template styles captions in a serif face */
+  &__title { margin: 0; font-size: 0.95em; line-height: 1.35; }
+  &__tags { display: flex; flex-wrap: wrap; gap: 0.3em; margin: 0.4em 0 0; font-size: 0.7em; }
+  &__year,
+  &__tool {
+    padding: 0.05em 0.55em;
+    border: 1px solid var(--global-border-color);
+    border-radius: 999px;
+    color: var(--global-fig-caption-color);
+  }
+  &__year { border-color: var(--global-base-color); color: var(--global-base-color); font-weight: bold; }
+  &__caption { margin: 0.45em 0 0; font-size: 0.82em; }
+  &__links { margin: 0.35em 0 0; font-size: 0.78em; }
+  &__sep { margin: 0 0.4em; opacity: 0.6; }
 }
-
-.simulation-description {
-  margin-top: 1em;
-
-  h2 {
-    margin-bottom: 0.5em;
-  }
-
-  ul {
-    margin: 1em 0;
-  }
-}
-
 
 /* Home page */
 .home-intro__title { margin-top: 0; }

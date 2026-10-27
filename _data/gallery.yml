@@ -1,0 +1,135 @@
+# Simulation gallery (rendered by _pages/gallery.md).
+#
+# Each group is a section on the page; items appear in the order listed.
+#   video:   file name in /images/cfd_gallery/video/ (an MP4 with a matching .jpg poster)
+#   width, height: the video's pixel size; clips wider than 2:1 span both columns
+#   tools:   shown as labels under the title
+#   links:   optional; each has a label and a url (site-relative like /portfolio/portfolio-1/, or a full https:// address)
+
+- group: Cilia and particles
+  items:
+    - title: Particle transport by peristaltic waves of artificial cilia
+      year: 2025
+      tools: [Fortran, MATLAB, C, Python]
+      video: pwave
+      width: 800
+      height: 204
+      caption: Waves travelling along an array of beating artificial cilia carry a deformable particle through a channel.
+      links:
+        - label: Cilia–particle framework
+          url: /portfolio/portfolio-1/
+    - title: Particle detection and deflection with artificial cilia
+      year: 2025
+      tools: [Fortran, MATLAB, C, Python]
+      video: ciliadnd
+      width: 800
+      height: 208
+      caption: A particle passing over passive artificial cilia deflects them; the deflections are used to detect the particle and infer its size and shape.
+      links:
+        - label: Paper (J. Fluids Struct. 2026)
+          url: https://doi.org/10.1016/j.jfluidstructs.2025.104446
+    - title: Cilia–particle interaction
+      year: 2022
+      tools: [Fortran, MATLAB, C, Python]
+      video: ibm_ellipse
+      width: 800
+      height: 158
+      caption: Flexible cilia and a deformable elliptical particle interacting through the surrounding fluid, using the immersed boundary method.
+      links:
+        - label: Cilia–particle framework
+          url: /portfolio/portfolio-1/
+
+- group: Immersed boundary methods in OpenFOAM
+  items:
+    - title: Particle in a lid-driven cavity
+      year: 2024
+      tools: [OpenFOAM custom solver]
+      video: 3d_particle
+      width: 800
+      height: 474
+      caption: A 3D particle in a lid-driven cavity, coupled to the flow with an immersed boundary method in a custom OpenFOAM solver.
+      links:
+        - label: Project
+          url: /portfolio/portfolio-8/
+    - title: Particle in channel flow
+      year: 2024
+      tools: [OpenFOAM custom solver]
+      video: channel_particle
+      width: 800
+      height: 408
+      caption: The same immersed boundary coupling applied to a particle carried along a channel.
+      links:
+        - label: Project
+          url: /portfolio/portfolio-8/
+
+- group: Fluid–structure interaction and solid mechanics
+  items:
+    - title: Autorotation of a rotor
+      year: 2024
+      tools: [OpenFOAM]
+      video: inducedRotor2D
+      width: 500
+      height: 500
+      caption: A free rotor set spinning by the flow around it.
+    - title: Falling elliptical cylinder
+      year: 2020
+      tools: [MATLAB]
+      video: lbm
+      width: 640
+      height: 480
+      caption: An elliptical cylinder falling through fluid, simulated with the lattice Boltzmann method.
+      links:
+        - label: Project
+          url: /portfolio/portfolio-2/
+    - title: Deflection of Cook's membrane
+      year: 2016
+      tools: [Uintah]
+      video: cook_deflection_animation
+      width: 600
+      height: 600
+      caption: Large deflection of Cook's membrane, a standard solid-mechanics benchmark, using the material point method.
+    - title: Two-way FSI of a cantilever beam in compressible flow
+      year: 2015
+      tools: [ANSYS]
+      video: fsi_beam
+      width: 800
+      height: 600
+      caption: A flexible cantilever beam bending in compressible flow, with the fluid and structure coupled in both directions.
+
+- group: Earlier projects (2014–2017)
+  items:
+    - title: Flow over a pipeline near the seabed
+      year: 2016
+      tools: [OpenFOAM custom solver]
+      video: circleAnimation
+      width: 800
+      height: 332
+      caption: Vortex shedding behind a pipeline close to the bed, where the nearby wall changes the wake.
+    - title: Thermal decomposition and deformation of a solid reactant
+      year: 2017
+      tools: [Uintah]
+      video: regression
+      width: 800
+      height: 406
+      caption: A solid reactant decomposing under heating and deforming as it does.
+    - title: Coffee stirred by a spoon
+      year: 2014
+      tools: [Star-CCM+]
+      video: coffee
+      width: 800
+      height: 450
+      caption: Vortex formation in a cup stirred by a spoon, with a multiphase (VOF) model and an overset mesh for the moving spoon.
+    - title: n-Heptane pyrolysis in a semi-open container
+      year: 2017
+      tools: [FDS]
+      video: pyrolysis_soot_flame
+      width: 800
+      height: 880
+      caption: Pyrolysis of n-heptane in a pan inside a semi-open container, simulated with the Fire Dynamics Simulator.
+    - title: River bed scour below a pipeline
+      year: 2016
+      tools: [OpenFOAM custom solver]
+      video: scourAnimation
+      width: 640
+      height: 480
+      caption: Erosion of the sediment bed beneath a pipeline, simulated with a custom OpenFOAM solver.
