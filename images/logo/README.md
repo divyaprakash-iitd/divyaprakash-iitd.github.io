@@ -1,6 +1,6 @@
-# dpcfd mark, proposed redesign
+# dpcfd logo
 
-Three finished files, all built from the same parametric TikZ drawing. The
+The site's logo. Three finished files, all built from the same parametric TikZ drawing. The
 bones are the original logo's: a two-turn spiral, an italic stem through its
 centre, a crossbar, and an ascender on the outer end, so the "d", "p" and "f"
 are still there. Three things changed to make it read as a vortex.
@@ -36,7 +36,21 @@ pdftocairo -svg dpcfd_mark.pdf dpcfd_mark.svg
 pdftocairo -png -transp -r 600 -singlefile dpcfd_mark.pdf dpcfd_mark
 ```
 
-`explorations.png` and `explorations-2.png` are the contact sheets of the
-directions tried on the way here: uniform stroke, taper toward the core,
-gradient disc, trailing streamline, pointed calligraphic stems, and several
-weights of the final design. They are kept for reference only.
+## Where it is used
+
+* `images/dpcfd_logo.png` is a 1000 px export of `dpcfd_mark`.
+* The favicons, the Apple touch icon and the web-app manifest icons in
+  `images/` are built from `dpcfd_mark_knockout.png` by
+  `scripts/make-favicons.py`. Bump the `?v=` query on the icon links in
+  `_includes/head/custom.html` after rebuilding them.
+* The structured-data organisation logo in `_includes/seo.html` points at
+  `images/favicon-512x512.png`.
+
+## Other folders
+
+* `explorations/` holds contact sheets of the directions tried on the way
+  here: uniform stroke, taper toward the core, gradient disc, trailing
+  streamline, pointed calligraphic stems, and several weights of the final
+  design.
+* `legacy/` holds the original logo (`dpcfd_logo_original.png`, with the
+  wordmark) and its faithful TikZ recreation (`dpcfd_logo.tex`).
