@@ -154,13 +154,12 @@ Twitter username (site.twitter.username), matching upstream behavior.
   {% endif %}
 {% endif %}
 
-{% if site.og_image %}
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": {{ seo_url | jsonify }},
-      "logo": {{ site.og_image | prepend: "/images/" | prepend: base_path | jsonify }}
-    }
-  </script>
-{% endif %}
+{% comment %} The organisation logo is the square site icon, not the social card image. {% endcomment %}
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": {{ seo_url | jsonify }},
+    "logo": {{ "/images/favicon-512x512.png" | prepend: base_path | jsonify }}
+  }
+</script>

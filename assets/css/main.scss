@@ -38,6 +38,46 @@
 ;
 /* Site-specific styles */
 
+/* Site header: the logo sits left of the site title inside the home link
+   (_includes/masthead.html). The image is images/masthead-logo.png, built by
+   scripts/make-favicons.py at 3x the 32 px display height. */
+.masthead .masthead__menu-item--lg a {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0;
+}
+
+/* Start the hover bar at the title: 30px logo width plus the gap above. */
+.masthead .greedy-nav .visible-links .masthead__menu-item--lg a:before {
+  left: calc(30px + 0.45em);
+  width: auto;
+  right: 0;
+}
+
+.masthead__logo {
+  display: block;
+  flex: none;
+  width: auto;
+  height: 32px;
+}
+
+/* Keep the "selected" underline under the title text, not under the logo too. */
+.masthead__title {
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.masthead .masthead__menu-item--lg.selected a,
+.masthead .masthead__menu-item--lg.selected a:hover {
+  border-bottom: 0;
+}
+
+.masthead .masthead__menu-item--lg.selected .masthead__title {
+  border-bottom-color: var(--global-text-color);
+}
+
 /* Simulation gallery: themed groups, two-column grid, wide clips span both columns */
 .gallery-intro { color: var(--global-fig-caption-color); font-size: 0.9em; }
 .gallery-group { margin: 2em 0 2.5em; }

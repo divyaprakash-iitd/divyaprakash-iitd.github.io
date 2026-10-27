@@ -22,3 +22,18 @@ Requirements:
 
 The output is byte-reproducible for a given Pillow/font version and is committed
 to the repo, so the build itself does not need Pillow.
+
+## `make-favicons.py`
+
+Rebuilds the favicon set in `images/` (`favicon-32x32.png`,
+`favicon-192x192.png`, `favicon-512x512.png`, `favicon.ico` and
+`apple-touch-icon-180x180.png`) and the site-header logo
+(`masthead-logo.png`) from the logo at
+`images/logo/dpcfd_mark_knockout.png`.
+
+```
+python3 scripts/make-favicons.py
+```
+
+Requires Python 3 with Pillow. After changing the icons, bump the `?v=` query
+on the icon links in `_includes/head/custom.html` so browsers refetch them.
