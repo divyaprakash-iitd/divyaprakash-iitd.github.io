@@ -27,7 +27,8 @@ to the repo, so the build itself does not need Pillow.
 
 Rebuilds the favicon set in `images/` (`favicon-32x32.png`,
 `favicon-192x192.png`, `favicon-512x512.png`, `favicon.ico` and
-`apple-touch-icon-180x180.png`) from the logo at
+`apple-touch-icon-180x180.png`) and the site-header logo
+(`masthead-logo.png`) from the logo at
 `images/logo/dpcfd_mark_knockout.png`.
 
 ```

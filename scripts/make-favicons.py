@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the site's favicon set from the dpcfd knockout mark.
+"""Build the site's favicon set and header logo from the dpcfd knockout mark.
 
 Source: images/logo/dpcfd_mark_knockout.png, the transparent 600 dpi export of
 images/logo/dpcfd_mark_knockout.tex (white vortex on a teal disc).
@@ -10,6 +10,9 @@ Writes, into images/:
   apple-touch-icon-180x180.png                                 opaque white ground,
                                                                since iOS fills
                                                                transparency with black
+  masthead-logo.png                                            96 px tall, transparent;
+                                                               the site-header logo,
+                                                               shown 32 px tall (3x)
 
 Usage:  python3 scripts/make-favicons.py
 """
@@ -46,6 +49,13 @@ def main():
 
     apple = icon(mark, 180, 0.08, background=(255, 255, 255, 255)).convert("RGB")
     apple.save(os.path.join(IMAGES, "apple-touch-icon-180x180.png"), optimize=True)
+
+    # Header logo: shown 32 px tall in _includes/masthead.html, so render at 3x.
+    # Keep the width/height attributes there in step with the printed size.
+    head = mark.copy()
+    head.thumbnail((10 * 96, 96), Image.Resampling.LANCZOS)
+    head.save(os.path.join(IMAGES, "masthead-logo.png"), optimize=True)
+    print(f"masthead-logo.png: {head.width}x{head.height}")
 
 
 if __name__ == "__main__":

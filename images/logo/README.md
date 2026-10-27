@@ -43,6 +43,9 @@ pdftocairo -png -transp -r 600 -singlefile dpcfd_mark.pdf dpcfd_mark
   `images/` are built from `dpcfd_mark_knockout.png` by
   `scripts/make-favicons.py`. Bump the `?v=` query on the icon links in
   `_includes/head/custom.html` after rebuilding them.
+* The site header shows `images/masthead-logo.png`, also built by
+  `scripts/make-favicons.py`, left of the site title (`_includes/masthead.html`,
+  styled at the top of the site-specific section of `assets/css/main.scss`).
 * The structured-data organisation logo in `_includes/seo.html` points at
   `images/favicon-512x512.png`.
 
