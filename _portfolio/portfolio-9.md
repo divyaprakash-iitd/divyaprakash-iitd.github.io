@@ -11,6 +11,6 @@ As part of Google Summer of Code 2025, I worked on enhancing the MLPCpp module i
 
  - Integrating the Tracy profiler for low-overhead performance analysis.
  - Optimizing variable mapping with hash maps to reduce runtime overhead.
- - Refactoring neural network evaluation code, achieving a 1.3× speedup in tests.
+ - Refactoring neural network evaluation code.
  - Further details, including implementation notes, benchmarks, and future work, are available in my full [project summary](https://gist.github.com/divyaprakash-iitd/998eaf88bcc1b1325c29a53dca8a3e91)
 

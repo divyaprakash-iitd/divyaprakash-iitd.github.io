@@ -10,7 +10,7 @@ author_profile: true
 In summer 2025 I took part in Google Summer of Code with **Stitching SU2**, working on the project ["**Using Data-Driven, Physics-Informed Machine Learning to Model Fluid Properties in Computational Fluid Dynamics**"](https://summerofcode.withgoogle.com/programs/2025/projects/iFt1m8Wx). These posts chronicle my weekly progress, challenges and learnings during the program.
 
 <div class="gsoc-outcome">
-  <p><strong>Outcome:</strong> profiling support and performance improvements to SU2's MLPCpp neural-network module, including a 1.3× speedup of network evaluation in tests.</p>
+  <p><strong>Outcome:</strong> profiling support and performance improvements to SU2's MLPCpp neural-network module.</p>
   <p><a href="https://gist.github.com/divyaprakash-iitd/998eaf88bcc1b1325c29a53dca8a3e91">Read the final project summary</a> (results, benchmarks and future work) · <a href="{{ base_path }}/portfolio/portfolio-9/">Project overview</a></p>
 </div>
 
