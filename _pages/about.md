@@ -9,6 +9,13 @@ redirect_from:
 
 {% include base_path %}
 
+<figure class="home-banner">
+  <video class="lazy-play" src="{{ base_path }}/images/home/cilia_transport_banner.mp4" poster="{{ base_path }}/images/home/cilia_transport_banner.jpg"
+         width="1600" height="330" muted loop playsinline preload="metadata" controls
+         aria-label="Simulation: two channels lined with beating artificial cilia, each carrying a particle; the particle is stiff in the top channel and floppy in the bottom one"></video>
+  <figcaption>Artificial cilia transporting a stiff (top) and a floppy (bottom) particle. <a href="{{ base_path }}/gallery/">More simulations</a></figcaption>
+</figure>
+
 <div class="home-intro">
   <h1 class="home-intro__title">Hi, I'm Divyaprakash.</h1>
   <p class="home-intro__lead">
