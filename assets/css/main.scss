@@ -121,6 +121,23 @@
 }
 
 /* Home page */
+.home-banner {
+  margin: 0 0 1.5em;
+
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background: #21918c;  /* the clip's own teal, so there is no flash before the first frame */
+  }
+  figcaption {
+    margin-top: 0.5em;
+    font-family: inherit;
+    font-size: 0.8em;
+    color: var(--global-fig-caption-color);
+  }
+}
 .home-intro__title { margin-top: 0; }
 .home-intro__lead { font-size: 1.05em; }
 
