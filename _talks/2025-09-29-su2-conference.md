@@ -4,13 +4,14 @@ collection: talks
 type: "Talk"
 talk_type: "Talk"
 permalink: /talks/2025-09-su2-conference
-venue: "SU2 Conference 2025"
+venue: "6th SU2 Conference and 3rd Turbo Workshop"
 date: 2025-09-29
+location: "Varenna, Italy (attended virtually)"
 excerpt: "Results of my Google Summer of Code 2025 project, presented on 29 September 2025."
 ---
 {% include base_path %}
 
-Presented on 29 September 2025. Mentors: Evert Bunschoten and Joshua A. Kelly.
+Presented remotely on 29 September 2025 at the 6th SU2 Conference, held at Villa Monastero in Varenna, Italy. Mentors: Evert Bunschoten and Joshua A. Kelly.
 
 The results of my Google Summer of Code 2025 project: integrating the Tracy profiler into SU2, and profiling and
 improving the MLPCpp module that runs neural networks inside SU2's data-driven fluid simulations.

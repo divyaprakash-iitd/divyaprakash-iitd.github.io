@@ -28,7 +28,6 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
 - [ ] Teaching: the template's sample pages in `_teaching/` are still published (hidden from the menu). Replace them
       with the courses taught at Jorhat Engineering College and Institute of Technology Gopeshwar (2018–2020) once the
       content is ready, and add Teaching to `_data/navigation.yml`; or delete them.
-- [ ] Talks: add the SU2 Conference 2025 location (`location:` in `_talks/2025-09-29-su2-conference.md`).
 
 ## Notes for future template updates
 - Upstream template: https://github.com/academicpages/academicpages.github.io (last merged at 7b95833, Oct 2026).
