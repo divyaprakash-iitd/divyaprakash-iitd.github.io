@@ -10,10 +10,12 @@ redirect_from:
 {% include base_path %}
 
 <figure class="home-banner">
-  <video class="lazy-play" src="{{ base_path }}/images/home/cilia_transport_banner.mp4" poster="{{ base_path }}/images/home/cilia_transport_banner.jpg"
-         width="1600" height="330" muted loop playsinline preload="metadata" controls
-         aria-label="Simulation: two channels lined with beating artificial cilia, each carrying a particle; the particle is stiff in the top channel and floppy in the bottom one"></video>
-  <figcaption>Artificial cilia transporting a stiff (top) and a floppy (bottom) particle. <a href="{{ base_path }}/gallery/">More simulations</a></figcaption>
+  <video class="lazy-play" src="{{ base_path }}/images/home/ciliadnd_banner.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner.jpg"
+         width="1600" height="334" muted loop playsinline preload="metadata" controls
+         aria-label="Simulation: an elliptical particle carried by flow through a channel lined with four pairs of flexible cilia"></video>
+  <figcaption>An elliptical particle carried by flow through a channel lined with flexible cilia. Colour shows the flow
+    speed; white streaks move with the fluid. From my work on <a href="{{ base_path }}/publication/2026-cilia-particle-sensing">sensing particles with artificial cilia</a>.
+    <a href="{{ base_path }}/gallery/">More simulations</a></figcaption>
 </figure>
 
 <div class="home-intro">
