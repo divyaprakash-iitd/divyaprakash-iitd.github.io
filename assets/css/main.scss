@@ -326,3 +326,34 @@ video.lazy-play {
   &__date { margin: 0.2em 0 0; font-size: 0.75em; color: var(--global-fig-caption-color); }
   &__summary { margin: 0.35em 0 0; font-size: 0.85em; }
 }
+
+/* Talks: poster and slide previews */
+.talk-preview {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 1em 0 0.5em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 4px;
+
+  &--portrait { max-width: 420px; }
+}
+
+/* Talks: embedded recording (16:9) */
+.talk-video {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 16 / 9;
+  margin: 1em 0;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 4px;
+  }
+}

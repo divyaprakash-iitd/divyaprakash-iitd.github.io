@@ -24,11 +24,10 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
 - [x] Sidebar employer is cut off ("Indian Institute of Technolo…"): use "IIT Delhi" in `_config.yml` → `author.employer`.
 
 ## 3. Leftover template content
-- [ ] Sample pages are still published and listed in the sitemap even though they're hidden from the menu:
-      `_publications/` (Paper Title Number 1–5), `_talks/` (Talk 1–3, Tutorial 1), `_teaching/` (Teaching 1–2),
-      plus `_pages/markdown.md`, `non-menu-page.md`, `archive-layout-with-content.md`, `terms.md`.
-- [ ] Either replace them with real publications and talks (and add Publications/Talks back to `_data/navigation.yml`),
-      or delete them.
+- [x] Sample publications and talks replaced with the real ones (Nov 2026); Publications and Talks are back in the menu.
+- [ ] Teaching: the template's sample pages in `_teaching/` are still published (hidden from the menu). Replace them
+      with the courses taught at Jorhat Engineering College and Institute of Technology Gopeshwar (2018–2020) once the
+      content is ready, and add Teaching to `_data/navigation.yml`; or delete them.
 
 ## Notes for future template updates
 - Upstream template: https://github.com/academicpages/academicpages.github.io (last merged at 7b95833, Oct 2026).

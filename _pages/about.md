@@ -97,6 +97,8 @@ redirect_from:
 - Machine Learning Based Sensing of Particle Shape and Size Using Passive Artificial Cilia. *Journal of Fluids and Structures*, 140:104446, 2026. [DOI](https://doi.org/10.1016/j.jfluidstructs.2025.104446)
 - A Review of Computational Modeling of Fluid-Immersed Flexible Filaments. *Journal of the Indian Institute of Science*, 104:277, 2024. [DOI](https://doi.org/10.1007/s41745-024-00423-x)
 
+[All publications]({{ base_path }}/publications/) · [Talks and posters]({{ base_path }}/talks/)
+
 **Awards**
 
 - Winner, Art &amp; Science Competition, ECCOMAS Congress 2024, Lisbon ([certificate]({{ base_path }}/images/Eccomas_competition_winner_certificate.jpeg))
