@@ -10,16 +10,14 @@ redirect_from:
 {% include base_path %}
 
 <figure class="home-banner">
-  <video class="lazy-play" src="{{ base_path }}/images/home/ciliadnd_banner_up.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner_up.jpg"
+  <video class="lazy-play" data-sync="ciliadnd-sorting" src="{{ base_path }}/images/home/ciliadnd_banner_up.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner_up.jpg"
          width="1600" height="334" muted loop playsinline preload="metadata" controls
          aria-label="Simulation: an elliptical particle carried by flow through a channel lined with four pairs of flexible cilia; six cilia sense it and the last two sort it towards the top of the channel"></video>
-  <video class="lazy-play" src="{{ base_path }}/images/home/ciliadnd_banner_down.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner_down.jpg"
+  <video class="lazy-play" data-sync="ciliadnd-sorting" src="{{ base_path }}/images/home/ciliadnd_banner_down.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner_down.jpg"
          width="1600" height="334" muted loop playsinline preload="metadata" controls
          aria-label="Simulation: the same particle in the same channel; this time the last two cilia sort it towards the bottom of the channel"></video>
-  <figcaption>Flexible cilia sensing and sorting a particle: the six white cilia sense its size and shape, and the two
-    red cilia sort it, holding one cilium upright to send it towards the top (upper clip) or the bottom (lower clip) of
-    the channel. Both clips show the same particle and are identical until it reaches the red cilia. Colour shows the
-    flow velocity along the channel; white streaks move with the fluid. From my work on <a href="{{ base_path }}/publication/2026-cilia-particle-sensing">sensing particles with artificial cilia</a>.
+  <figcaption>The same particle, sorted two ways: six white cilia sense its size and shape, then the two red cilia
+    send it up (top clip) or down (bottom clip). From my work on <a href="{{ base_path }}/publication/2026-cilia-particle-sensing">sensing particles with artificial cilia</a>.
     <a href="{{ base_path }}/gallery/">More simulations</a></figcaption>
 </figure>
 

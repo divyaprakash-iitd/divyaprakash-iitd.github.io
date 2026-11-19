@@ -33,4 +33,38 @@
   })();
 </script>
 
+<!-- Videos sharing a data-sync value (e.g. the home banner's two sorting clips) play in step: the others follow the
+     first. Without this, a clip whose file arrives later stays behind for good. -->
+<script>
+  (function () {
+    /* Use only block comments here: the site compresses each page's HTML onto one line. */
+    var groups = {};
+    document.querySelectorAll('video[data-sync]').forEach(function (v) {
+      (groups[v.dataset.sync] = groups[v.dataset.sync] || []).push(v);
+    });
+    Object.keys(groups).forEach(function (name) {
+      var leader = groups[name][0], followers = groups[name].slice(1);
+      if (!followers.length) return;
+      var lastJump = 0;
+      function align() {
+        /* At most one correction per second, and never while a clip is still seeking, so corrections don't pile up. */
+        if (leader.seeking || Date.now() - lastJump < 1000) return;
+        followers.forEach(function (f) {
+          if (f.seeking) return;
+          var gap = Math.abs(f.currentTime - leader.currentTime);
+          /* Ignore the moment one clip has looped and the other has not yet: same length, so they meet again. */
+          if (gap > 0.15 && gap < (leader.duration || 0) / 2) { f.currentTime = leader.currentTime; lastJump = Date.now(); }
+        });
+      }
+      leader.addEventListener('timeupdate', align);
+      leader.addEventListener('seeked', align);
+      leader.addEventListener('play', function () {
+        followers.forEach(function (f) { var p = f.play(); if (p && p.catch) p.catch(function () {}); });
+        align();
+      });
+      leader.addEventListener('pause', function () { followers.forEach(function (f) { f.pause(); }); });
+    });
+  })();
+</script>
+
 <!-- end custom footer snippets -->
