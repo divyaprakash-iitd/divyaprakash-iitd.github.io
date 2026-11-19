@@ -45,6 +45,9 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
       on your computer (`--site` writes these 1600 px files; `--pad-to` gives both clips the same length).
       The gallery clip `ciliadnd.mp4` is remade from the same run with `make_gallery_animation.py` in
       `~/phd/website_assets/ciliadnd_gallery_remake/`; its sorting cilia are still white, like the original.
+- [x] Gallery: `pwave.mp4` (peristaltic waves) redrawn in the same style as the ciliadnd clip (viridis velocity,
+      white cilia, amber particle, axes in units of L) from its run's stored fields (Nov 2026); rebuilt with
+      `make_pwave_gallery.py --site` in `~/phd/website_assets/pwave_gallery_remake/` on your computer.
 - [ ] The template's sample "Terms and Privacy Policy" page was removed. The site uses Google Analytics, so consider a
       short privacy note of your own (what Analytics and the Giscus comments collect).
 - [ ] Links: `.github/workflows/link-check.yml` checks every link monthly (and on demand from the Actions tab). Its
