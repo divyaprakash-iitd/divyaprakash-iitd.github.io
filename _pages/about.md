@@ -16,7 +16,8 @@ redirect_from:
   <video class="lazy-play" data-sync="ciliadnd-sorting" src="{{ base_path }}/images/home/ciliadnd_banner_down.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner_down.jpg"
          width="1600" height="334" muted loop playsinline preload="metadata" controls
          aria-label="Simulation: a larger round particle in the same channel; the two red cilia send it towards the bottom of the channel"></video>
-  <figcaption>Two different particles: six white cilia sense each one's size and shape, and the two red cilia send the
+  <figcaption><span class="home-banner__title">Wheatfield with Cilia</span>
+    Two different particles: six white cilia sense each one's size and shape, and the two red cilia send the
     elongated particle up and the round one down (a sorting concept I'm exploring). From my work on <a href="{{ base_path }}/publication/2026-cilia-particle-sensing">sensing particles with artificial cilia</a>.
     <a href="{{ base_path }}/gallery/">More simulations</a></figcaption>
 </figure>
