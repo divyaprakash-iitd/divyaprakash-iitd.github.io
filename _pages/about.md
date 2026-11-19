@@ -12,9 +12,10 @@ redirect_from:
 <figure class="home-banner">
   <video class="lazy-play" src="{{ base_path }}/images/home/ciliadnd_banner.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner.jpg"
          width="1600" height="334" muted loop playsinline preload="metadata" controls
-         aria-label="Simulation: an elliptical particle carried by flow through a channel lined with four pairs of flexible cilia"></video>
-  <figcaption>An elliptical particle carried by flow through a channel lined with flexible cilia. Colour shows the flow
-    speed; white streaks move with the fluid. From my work on <a href="{{ base_path }}/publication/2026-cilia-particle-sensing">sensing particles with artificial cilia</a>.
+         aria-label="Simulation: an elliptical particle carried by flow through a channel lined with four pairs of flexible cilia; the first six cilia sense its size and shape and the last two sort it towards the top or bottom"></video>
+  <figcaption>Flexible cilia sensing and sorting a particle: the first six cilia sense its size and shape, and the last
+    two sort it, sending it towards the top or the bottom of the channel. Colour shows the flow speed; white streaks move
+    with the fluid. From my work on <a href="{{ base_path }}/publication/2026-cilia-particle-sensing">sensing particles with artificial cilia</a>.
     <a href="{{ base_path }}/gallery/">More simulations</a></figcaption>
 </figure>
 

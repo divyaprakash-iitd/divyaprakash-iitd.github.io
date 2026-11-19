@@ -24,7 +24,7 @@
       video: ciliadnd
       width: 800
       height: 208
-      caption: A particle passing over passive artificial cilia deflects them; the deflections are used to detect the particle and infer its size and shape.
+      caption: A particle passing over artificial cilia deflects them; the first six cilia sense its size and shape from these deflections, and the last two sort it towards the top or the bottom of the channel.
       links:
         - label: Paper (J. Fluids Struct. 2026)
           url: https://doi.org/10.1016/j.jfluidstructs.2025.104446
