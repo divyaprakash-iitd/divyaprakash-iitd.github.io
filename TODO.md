@@ -37,9 +37,11 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
 - `url` in `_config.yml` must stay `https://dpcfd.com`, or the JavaScript (theme toggle, menu) is blocked by the redirect.
 
 ## 4. Later
-- [x] Home banner: the two sorting cilia (the last pair) are red, the six sensing cilia white; the banner now shows
-      the same particle sorted up and sorted down (Nov 2026). Rebuilt with `make_homepage_pair.py` in
-      `~/phd/website_assets/ciliadnd_homepage_pair/` on your computer (`--site` writes these 1600 px files).
+- [x] Home banner: the two sorting cilia (the last pair) are red, the six sensing cilia white; the banner shows two
+      different particles, a round one sent up and an elongated one sent down (Nov 2026). Which sorting cilium bends
+      is prescribed in the simulation, not decided from the sensing, so the caption must not suggest otherwise.
+      Rebuilt with `make_homepage_pair.py round_up` / `elong_down` in `~/phd/website_assets/ciliadnd_homepage_pair/`
+      on your computer (`--site` writes these 1600 px files; `--pad-to` gives both clips the same length).
       The gallery clip `ciliadnd.mp4` is remade from the same run with `make_gallery_animation.py` in
       `~/phd/website_assets/ciliadnd_gallery_remake/`; its sorting cilia are still white, like the original.
 - [ ] The template's sample "Terms and Privacy Policy" page was removed. The site uses Google Analytics, so consider a
