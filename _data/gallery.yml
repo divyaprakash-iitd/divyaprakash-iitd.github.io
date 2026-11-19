@@ -24,7 +24,7 @@
       video: ciliadnd
       width: 800
       height: 208
-      caption: A particle passing over artificial cilia deflects them; the first six cilia sense its size and shape from these deflections, and the last two sort it towards the top or the bottom of the channel.
+      caption: A particle passing over artificial cilia deflects them; the first six cilia sense its size and shape from these deflections, and the last two send it towards the top or the bottom of the channel (a sorting concept I'm exploring).
       links:
         - label: Paper (J. Fluids Struct. 2026)
           url: https://doi.org/10.1016/j.jfluidstructs.2025.104446
