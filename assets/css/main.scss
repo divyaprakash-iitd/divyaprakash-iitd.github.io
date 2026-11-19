@@ -131,6 +131,7 @@
     border-radius: 4px;
     background: #3a3d44;  /* the clip's wall colour, so there is no flash before the first frame */
   }
+  video + video { margin-top: 0.4em; }  /* sorted-up clip above the sorted-down clip */
   figcaption {
     margin-top: 0.5em;
     font-family: inherit;

@@ -37,8 +37,11 @@ Improvement ideas from the October 2026 review. Kept in the repo but excluded fr
 - `url` in `_config.yml` must stay `https://dpcfd.com`, or the JavaScript (theme toggle, menu) is blocked by the redirect.
 
 ## 4. Later
-- [ ] Home banner: consider giving the two sorting cilia (the last pair) a different colour from the six sensing cilia.
-      The animation is rebuilt with `make_animation.py` in `~/phd/website_assets/ciliadnd_animation/` on your computer.
+- [x] Home banner: the two sorting cilia (the last pair) are red, the six sensing cilia white; the banner now shows
+      the same particle sorted up and sorted down (Nov 2026). Rebuilt with `make_homepage_pair.py` in
+      `~/phd/website_assets/ciliadnd_homepage_pair/` on your computer (`--site` writes these 1600 px files).
+      The gallery clip `ciliadnd.mp4` is remade from the same run with `make_gallery_animation.py` in
+      `~/phd/website_assets/ciliadnd_gallery_remake/`; its sorting cilia are still white, like the original.
 - [ ] The template's sample "Terms and Privacy Policy" page was removed. The site uses Google Analytics, so consider a
       short privacy note of your own (what Analytics and the Giscus comments collect).
 - [ ] Links: `.github/workflows/link-check.yml` checks every link monthly (and on demand from the Actions tab). Its
