@@ -141,9 +141,16 @@
   & &__title {  /* the banner's name above the clips, after van Gogh's Wheatfield with Crows; doubled class beats the theme's .page__content p margin */
     margin: 0 0 0.4em;
     font-size: 0.95em;
-    font-style: italic;
     color: var(--global-text-color);
   }
+  &__after {  /* "· after van Gogh's ..." next to the title, in the caption's size and colour */
+    font-size: 0.8em;
+    color: var(--global-fig-caption-color);
+    white-space: nowrap;
+    a { color: inherit; }
+    @media (max-width: 600px) { display: block; }  /* on phones it gets its own line, without the dot */
+  }
+  @media (max-width: 600px) { &__dot { display: none; } }
 }
 .home-intro__title { margin-top: 0; }
 .home-intro__lead { font-size: 1.05em; }

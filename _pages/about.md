@@ -10,7 +10,8 @@ redirect_from:
 {% include base_path %}
 
 <figure class="home-banner">
-  <p class="home-banner__title">Wheatfield with Cilia</p>
+  <p class="home-banner__title"><em>Wheatfield with Cilia</em>
+    <span class="home-banner__after"><span class="home-banner__dot">· </span>after van Gogh's <a href="https://en.wikipedia.org/wiki/Wheatfield_with_Crows"><em>Wheatfield with Crows</em></a></span></p>
   <video class="lazy-play" data-sync="ciliadnd-sorting" src="{{ base_path }}/images/home/ciliadnd_banner_up.mp4" poster="{{ base_path }}/images/home/ciliadnd_banner_up.jpg"
          width="1600" height="334" muted loop playsinline preload="metadata" controls
          aria-label="Simulation: a small elongated particle carried by flow through a channel lined with four pairs of flexible cilia; the two red cilia send it towards the top of the channel"></video>
