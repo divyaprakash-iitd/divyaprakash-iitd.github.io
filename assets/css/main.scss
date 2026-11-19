@@ -138,10 +138,9 @@
     font-size: 0.8em;
     color: var(--global-fig-caption-color);
   }
-  &__title {  /* the banner's name, after van Gogh's Wheatfield with Crows */
-    display: block;
-    margin-bottom: 0.2em;
-    font-size: 1.15em;
+  & &__title {  /* the banner's name above the clips, after van Gogh's Wheatfield with Crows; doubled class beats the theme's .page__content p margin */
+    margin: 0 0 0.4em;
+    font-size: 0.95em;
     font-style: italic;
     color: var(--global-text-color);
   }
