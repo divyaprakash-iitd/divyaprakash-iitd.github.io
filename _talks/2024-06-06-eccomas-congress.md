@@ -21,5 +21,8 @@ At the same congress, my image *Cilia Particle Interaction* won the
 
 <a href="{{ base_path }}/files/talks/2024-06-eccomas-slides.pdf"><img src="{{ base_path }}/images/talks/2024-06-eccomas-slides.webp" alt="Title slide: Sensing of Particle Shape and Size Using Arrays of Artificial Cilia" class="talk-preview" loading="lazy"></a>
 
-[Slides (PDF, 22 MB)]({{ base_path }}/files/talks/2024-06-eccomas-slides.pdf) ·
+[Slides (PDF, 13 MB)]({{ base_path }}/files/talks/2024-06-eccomas-slides.pdf) ·
 [Paper in the Journal of Fluids and Structures]({{ base_path }}/publication/2026-cilia-particle-sensing)
+
+Figures from other authors' work are left out of the online slides; the references are listed at the end. The
+animations play in Adobe Acrobat Reader.
